@@ -10,7 +10,6 @@ const fetchCountries = async()=>{
     try{
         const response = await fetch(allCountryApiUrl);
         contriesData = await response.json();
-        console.log(contriesData);  
         populateCountryOption(contriesData);
     }catch(error){
         alert("Not able to fetch the data");
